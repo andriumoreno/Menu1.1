@@ -18,53 +18,53 @@ public class Hellowordapp {
         String nombre4 = "" ;
         String nombre5 = "" ;
         
-        while ( m == 0){   
+        while ( m == 0){// Permanecer en este menu mientas m sea 0
             Scanner teclado = new Scanner(System.in);
-            System.out.println("[IPC1]Tarea3_201602851 \n"
+            System.out.println("[IPC1]Tarea3_201602851 \n"// Imprimir el menu principal
                     + "1.Usuarios \n"
                     + "2.Contador de digitos\n"
                     + "3.Tres numeros de mayor a menor\n"
                     + "4.Calcular promedio\n"
                     + "5.Salir");
-            m = teclado.nextInt();
+            m = teclado.nextInt();// le pido al usuario que ingrese a cualquiera de las opciones del menu
         
             switch (m) {//Indico que value el valor de la variable y me y dependediend del valor entre a un submenu
                 case 1:  // variables manejadas en esta case p
                 int n1 = 0;    
-                    while (m == 1){    
-       System.out.println("1.Ingresar usarios\n"
+                    while (m == 1){ // que se quede en submenu mientras m sea 1   
+       System.out.println("1.Ingresar usarios\n"// le prid que imprima el sub menu 1
                + "2.Mostrar Usuarios ascendentes\n"
                + "3.Mostrar Usuarios Decendente\n"
                + "4.Menu principal");
-       p = teclado.nextInt();//ingresar el valor de p
+       p = teclado.nextInt();//ingresar el valor de, le pido al usuario que ingrese el valor de p
               switch (p){// que cambie segun el valor de p   
-                   case 1: 
-                   System.out.println("Ingresar usuario1");//ingresar el nombre del usuario
-                   InputStreamReader in = new InputStreamReader(System.in);
-                   BufferedReader buffer = new BufferedReader(in);
+                   case 1: // menu ingresar usuario
+                   System.out.println("Ingresar usuario1");// imprima ingresar el nombre del usuario
+                   InputStreamReader in = new InputStreamReader(System.in);// No estoy muy seguro de lo que hice aqui
+                   BufferedReader buffer = new BufferedReader(in);// pero me funciono :)
                    try{
-                   nombre1 = buffer.readLine();
+                   nombre1 = buffer.readLine();// le pido al usuario que ingrese su nombre
                    }catch(IOException e){};
-                   n1 = 1;
-                   while( n1 == 1 ) {
+                   n1 = 1;// que cambie de valor la variable para que entre al algoritmo de deteccion de usuario repetidos
+                   while( n1 == 1 ) {// le pido al programa que se quede aqui hasta que se cumplan las condiciones
                    System.out.println("Ingresar usuario2");//ingresar el nombre del usuario
                    InputStreamReader isr = new InputStreamReader(System.in);
                    BufferedReader buffe = new BufferedReader(isr);
                    try{
-                   nombre2 = buffe.readLine();
+                   nombre2 = buffe.readLine();// le pido que ingrese el segundo usuario
                    }catch(IOException e){};
-                   if (nombre1.equals(nombre2))
+                   if (nombre1.equals(nombre2))// si el nombre del usario1 es igual al usario 2 lo regreso para que lo ingrese nuevamente
                    {
                    System.out.println("Usuario existente");  
                    nombre2 = "";
                    }
-                   else{
-                   n1 = 2
+                   else{// si no son iguales puede continuar con el otro nombre
+                   n1 = 2;
                    }
                    }
                    
                    
-                   while(n1 == 2){
+                   while(n1 == 2){// Es el mismo algoritmo usado anterior mente con la diferencia que ahora comparara la entrada con los dos usarios anteriore
                    System.out.println("Ingresar usuario3");//ingresar el nombre del usuario
                    InputStreamReader is = new InputStreamReader(System.in);
                    BufferedReader buff = new BufferedReader(is);
@@ -76,7 +76,7 @@ public class Hellowordapp {
                    System.out.println("Usuario existente");  
                    nombre3 = "";
                    }
-                   else{
+                   else{// si no hay concidencias el usario puede escribir el tercer usario 
                    n1 = 3;
                    }
                    }
@@ -202,7 +202,27 @@ public class Hellowordapp {
            a = 0;
            break;
            case 2:
-               if(){
+               if( x>=y && y>=z ){
+                System.out.println("el orden es el siguente" +z +"," +y  +"," +x +"." );
+                a = 0;
+               }
+               if( x>=z && z>=y ){
+                System.out.println("el orden es el siguente" +y +"," +z  +"," +x +"." );
+                a = 0;
+               }
+               if( y>=x && x>=z ){
+                System.out.println("el orden es el siguente" +z +"," +x  +"," +y +"." );
+                a = 0;
+               }
+               if( y>=z && z>=x ){
+                System.out.println("el orden es el siguente" +x +"," +z  +"," +y +"." );
+                a = 0;
+               }
+               if( z>=x && x>=y ){
+                System.out.println("el orden es el siguente" +y +"," +x  +"," +z +"." );
+                a = 0;
+               }
+               if( z>=y && y>=x ){
                 System.out.println("el orden es el siguente" +x +"," +y  +"," +z +"." );
                 a = 0;
                }
