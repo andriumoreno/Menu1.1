@@ -82,7 +82,7 @@ public class Hellowordapp {
                    }
                    
                    
-                   while (n1==3){
+                   while (n1==3){// el mismo algorito comparando usuarios anteriores con los nuevos
                    System.out.println("Ingresar usuario4");//ingresar el nombre del usuario
                    InputStreamReader lol = new InputStreamReader(System.in);
                    BufferedReader buf = new BufferedReader(lol);
@@ -94,12 +94,12 @@ public class Hellowordapp {
                    System.out.println("Usuario existente");  
                    nombre4 = "";
                    }
-                   else
+                   else// si no hay coincidencias el usuario puede ingresar el 5to usario
                    {
                    n1 = 4;
                    }
                    }
-                   while(n1==4){
+                   while(n1==4){// El mismo algoritmo que compara si el usuario ya existe
                    System.out.println("Ingresar usuario5");//ingresar el nombre del usuario
                    InputStreamReader yolo = new InputStreamReader(System.in);
                    BufferedReader bu = new BufferedReader(yolo);
@@ -111,7 +111,7 @@ public class Hellowordapp {
                    System.out.println("Usuario existente");  
                    nombre5 = "";
                    }
-                   else
+                   else// si no hay coincidencias el usario puede continuar
                    {
                    n1 = 5;
                    }
@@ -121,11 +121,11 @@ public class Hellowordapp {
                
                
                
-                  n1 = 0;
+                  n1 = 0;// que reinicie la variable que maneja los algoritmos de comparacion 
                   p = 0;// una vez ingresado que regrese al sub menu 1
            break;
            case 2:
-           System.out.println(nombre1);
+           System.out.println(nombre1);//que imprima el orden en el que fueron ingresado
            System.out.println(nombre2);
            System.out.println(nombre3);
            System.out.println(nombre4);
@@ -133,75 +133,75 @@ public class Hellowordapp {
            
            break;
            case 3:
-           System.out.println(nombre5);   
+           System.out.println(nombre5);// que imprima el orden contrario al que fueron ingresados  
            System.out.println(nombre4);
            System.out.println(nombre3);
            System.out.println(nombre2);
            System.out.println(nombre1);
            break;
            case 4:
-           p = 0;   
-           m = 0;
+           p = 0; // devuelvo la variable p a o  
+           m = 0;// con esto le ordeno que regrese al menu principal
            break;
        }
        }
        break;
        case 2:// variables manejadas en este caso i y n 
        while(m==2){    
-       System.out.println("1.Ingresar numeros\n"
+       System.out.println("1.Ingresar numeros\n"// le pido que me imprima el segundo menu
                + "2.Mostrar numero de digitos\n"
                + "3.menu principal");
-       n = teclado.nextInt();
+       n = teclado.nextInt();// que escoja al menu que el desee ingresar
        switch (n){
         case 1: 
                System.out.println("Ingresar numeros");
-               contador = teclado.nextInt();
-                    if (contador >= 100000)
+               contador = teclado.nextInt();// le pido que ingrese el numero
+                    if (contador >= 100000)// si el numero es mas grande que 100000
                     {
-                    System.out.println("Error"); 
-                    contador = 0;
+                    System.out.println("Error");// muestre en pantalla error 
+                    contador = 0;// y que salga del menu
                     }
                     else
                     {
-                    while ( contador >= 1)
+                    while ( contador >= 1)// si el numero es menos de 100000
                     {
-                    contador = contador/10;  
-                    i= i +1;
+                    contador = contador/10;  // que divida el valor de contador hasta que sea menor o igual que 1
+                    i= i +1;// y por cada vez que ejecute la accion pasada que le sume 1 a i
                     }
                     }    
-                    n = 0;
+                    n = 0;// que salga del menu
        break;
        case 2:
-           System.out.println("El numero de digitos es " + i + "." );
-           n = 0;
-           i = 0;
+           System.out.println("El numero de digitos es " + i + "." );// que imprima el numero de digitos
+           n = 0;//regreso las variables a su valor
+           i = 0;//regreso las variables a su valor
            break;
            case 3:
-           n = 0;   
-           m = 0;    
+           n = 0;//regreso las variables a su valor   
+           m = 0;  // le pido que me regrese al menu principal  
            break;   
        }
        }
        break;
-       case 3:// variables manejadas en este case j
+       case 3:// variables manejadas en este case x y z
            int x = 0;
            int y = 0;
            int z = 0;
            int a;
        while( m== 3){    
-       System.out.println("1.Ingresar numeros");
-       System.out.println("2.Mostrar ordenados");
-       System.out.println("3.menu principal");
-       a = teclado.nextInt();
+       System.out.println("1.Ingresar numeros\n"
+               + "2.Mostrar ordenados\n"
+               + "3.menu principal"); // le pido que me muestre el menu de ordenar numeros 
+       a = teclado.nextInt();// que ingrese al menu que guste
        switch (a){
            case 1:
            System.out.println("Ingrese 3 numeros");    
-           x = teclado.nextInt();
+           x = teclado.nextInt();// le pido que ingrese los numeros
            y = teclado.nextInt();
            z = teclado.nextInt();
            a = 0;
            break;
-           case 2:
+           case 2:// aqui ingrese las posibles formas que existen para ordenar los numeros ingresados y escoja la que corresponde
                if( x>=y && y>=z ){
                 System.out.println("el orden es el siguente" +z +"," +y  +"," +x +"." );
                 a = 0;
@@ -229,14 +229,14 @@ public class Hellowordapp {
            break;
            case 3:
            m = 0;
-           a = 0;
+           a = 0;// le pido que me regrese al menu principal
            break;    
        }    
        }
        
        break;
        case 4:
-       System.out.println("1.Ingresar numero");
+       System.out.println("1.Ingresar numero");// ahora solo falta eso
        System.out.println("2.Mostrar numero de digitos");
        System.out.println("3.menu principal");
        break;
