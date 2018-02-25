@@ -293,7 +293,7 @@ public class Hellowordapp {
                 break;
                 case 3:
                 ño = 0;
-                m = 0;
+                m = 0;// regresar al menu principal
                 break;
            }
        }
