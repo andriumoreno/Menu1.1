@@ -116,11 +116,6 @@ public class Hellowordapp {
                    n1 = 5;
                    }
                    }
-               
-               
-               
-               
-               
                   n1 = 0;// que reinicie la variable que maneja los algoritmos de comparacion 
                   p = 0;// una vez ingresado que regrese al sub menu 1
            break;
@@ -147,7 +142,8 @@ public class Hellowordapp {
        }
        break;
        case 2:// variables manejadas en este caso i y n 
-       while(m==2){    
+       while( m == 2)
+       {    
        System.out.println("1.Ingresar numeros\n"// le pido que me imprima el segundo menu
                + "2.Mostrar numero de digitos\n"
                + "3.menu principal");
@@ -202,27 +198,33 @@ public class Hellowordapp {
            a = 0;
            break;
            case 2:// aqui ingrese las posibles formas que existen para ordenar los numeros ingresados y escoja la que corresponde
-               if( x>=y && y>=z ){
+               if( x>=y && y>=z )
+               {
                 System.out.println("el orden es el siguente" +z +"," +y  +"," +x +"." );
                 a = 0;
                }
-               if( x>=z && z>=y ){
+               if( x>=z && z>=y )
+               {
                 System.out.println("el orden es el siguente" +y +"," +z  +"," +x +"." );
                 a = 0;
                }
-               if( y>=x && x>=z ){
+               if( y>=x && x>=z )
+               {
                 System.out.println("el orden es el siguente" +z +"," +x  +"," +y +"." );
                 a = 0;
                }
-               if( y>=z && z>=x ){
+               if( y>=z && z>=x )
+               {
                 System.out.println("el orden es el siguente" +x +"," +z  +"," +y +"." );
                 a = 0;
                }
-               if( z>=x && x>=y ){
+               if( z>=x && x>=y )
+               {
                 System.out.println("el orden es el siguente" +y +"," +x  +"," +z +"." );
                 a = 0;
                }
-               if( z>=y && y>=x ){
+               if( z>=y && y>=x )
+               {
                 System.out.println("el orden es el siguente" +x +"," +y  +"," +z +"." );
                 a = 0;
                }
@@ -231,20 +233,72 @@ public class Hellowordapp {
            m = 0;
            a = 0;// le pido que me regrese al menu principal
            break;    
-       }    
+                    }    //
        }
        
        break;
        case 4:
-       System.out.println("1.Ingresar numero");// ahora solo falta eso
-       System.out.println("2.Mostrar numero de digitos");
-       System.out.println("3.menu principal");
-       break;
-       }
-        }
-    }
+       int ño;  
+       int k;
+       int deadpool [][] = new int [6][6];
+       deadpool [0][0] =1;
+       deadpool [1][0] =2;
+       deadpool [2][0] =3;
+       deadpool [3][0] =4;
+       deadpool [4][0] =5;
+       deadpool [5][0] =6;
+
+       while (m == 4){     
+       System.out.println("1.Ingresar notas\n"
+               + "2.Mostrar cuadro de notas\n"
+               + "3.menu principal");// ahora solo falta eso
+       ño = teclado.nextInt();
+           switch (ño){
+                case 1:
+                System.out.println("Seleccione el id");  
+                k = teclado.nextInt();
                 
- // TODO code application logic here
+                if ( k <= 6){
+                System.out.println("Ingrese las notas");
+                for (int columna = 1; columna < 6; columna++) {
+                    if (columna == 5) {
+                        deadpool[k-1][columna] = (deadpool[k-1][1] + deadpool[k-1][2] + deadpool[k-1][3] + deadpool[k-1][4])/4;  
+                    }
+                    else {
+                        deadpool[k-1][columna] = teclado.nextInt();
+                    }
+                }
+               
+                }
+                
+                ño = 0;
+                break;
+                case 2:
+                    System.out.println("Cuadro de Notas");
+                    k = 1;
+                    for(int filas = 0; filas< 6 ; filas++){
+                        System.out.println("");
+                        
+                        for(int columna = 0;columna < 6; columna++ ){
+                            System.out.print(deadpool[filas][columna]+"\t");
+                        }
+                    }
+                  System.out.println("");  
+                break;
+                case 3:
+                ño = 0;
+                m = 0;
+                break;
+           }
+       }
+        break;
+       }
+      
+      
+    }
+    }
+    }
+                 
 
 
-}
+
