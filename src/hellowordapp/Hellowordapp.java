@@ -237,11 +237,11 @@ public class Hellowordapp {
        }
        
        break;
-       case 4:
-       int ño;  
-       int k;
-       int deadpool [][] = new int [6][6];
-       deadpool [0][0] =1;
+       case 4:// es el sub menu de donde se ingresaran las notas de 6 estudiantes y se mostran en forma de matriz
+       int ño;  // manejara el sub menu de ingresar notas y de mostralas asi como de regresarte al menu principal
+       int k;// con esta variable nosotros seleccionamos sobre que fila de la columna nos moveremos
+       int deadpool [][] = new int [6][6];// con esto declaro el arreglo de 2 dimenciones y le digo de cuanto por cuanto lo quiero
+       deadpool [0][0] =1;// les dejo un valor fijo por que no necesitare modificarlas en el programa
        deadpool [1][0] =2;
        deadpool [2][0] =3;
        deadpool [3][0] =4;
@@ -249,41 +249,47 @@ public class Hellowordapp {
        deadpool [5][0] =6;
 
        while (m == 4){     
-       System.out.println("1.Ingresar notas\n"
+       System.out.println("1.Ingresar notas\n"//aqui se imprimien el menu numero 4
                + "2.Mostrar cuadro de notas\n"
                + "3.menu principal");// ahora solo falta eso
        ño = teclado.nextInt();
            switch (ño){
-                case 1:
+                case 1:     
+                while (ño == 1){    
                 System.out.println("Seleccione el id");  
-                k = teclado.nextInt();
+                k = teclado.nextInt();// le pido al usuario que ingrese id pero el id es el equivante a la fila que se quiera modificar
                 
-                if ( k <= 6){
-                System.out.println("Ingrese las notas");
-                for (int columna = 1; columna < 6; columna++) {
-                    if (columna == 5) {
+                if ( k <= 6){// si numero ingresado es menor igual que 6 que ingrese
+                System.out.println("Ingrese las notas");// que imprima ingrese las notas
+                for (int columna = 1; columna < 6; columna++) {// me muevo sobre las diferentes casillas que tiene la fila. le digo que comienze en la casilla 1 y que se dentenga en la ultima
+                    if (columna == 5) {// cuando llegue a la casilla numero 5 que me sume los valores anteriormente ingresados
                         deadpool[k-1][columna] = (deadpool[k-1][1] + deadpool[k-1][2] + deadpool[k-1][3] + deadpool[k-1][4])/4;  
                     }
                     else {
-                        deadpool[k-1][columna] = teclado.nextInt();
+                        deadpool[k-1][columna] = teclado.nextInt();// pero mientras no sea la casilla 5 que lea los valores que le ingresa el usario
                     }
                 }
-               
+                ño = 0;
+                }
+                if (k > 6){// si el id es mayo que 6
+                System.out.println("Id incorrecto");  // que imprima que es in correct y lo regrese a ingresar nuevamente el id 
+                k = 0;
                 }
                 
-                ño = 0;
+                }
                 break;
                 case 2:
-                    System.out.println("Cuadro de Notas");
-                    k = 1;
-                    for(int filas = 0; filas< 6 ; filas++){
-                        System.out.println("");
+                    System.out.println("Cuadro de Notas");// que imprima un titulo 
+                 
+                    for(int filas = 0; filas< 6 ; filas++){//2. cada vez que se termine de contar las casilla que cambie de fila
+                        System.out.println("");//3. y que me deje un espacio cada vez que termine con las casilas
                         
-                        for(int columna = 0;columna < 6; columna++ ){
+                        
+                        for(int columna = 0;columna < 6; columna++ ){// 1. le pido que se mueva dentro de las casillas de la fila y que imprima su valor
                             System.out.print(deadpool[filas][columna]+"\t");
                         }
                     }
-                  System.out.println("");  
+                  System.out.println("");  // al final tambien necesito que deje un espacio 
                 break;
                 case 3:
                 ño = 0;
@@ -299,6 +305,6 @@ public class Hellowordapp {
     }
     }
                  
-
+//https://github.com/andriumoreno/Menu/commits/master
 
 
